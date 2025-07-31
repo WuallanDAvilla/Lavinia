@@ -1,0 +1,123 @@
+/* Importando fontes elegantes e limpas */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Fundo escuro e sofisticado */
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    background-color: #34495e;
+    padding: 50px 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 450px;
+    max-width: 90vw;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    /* Adicionado para posicionar o canvas e o texto dentro dele */
+    position: relative; 
+}
+
+/* Animação para o card 'virar' ao aparecer */
+.card-enter {
+    opacity: 0;
+    transform: rotateY(-30deg) scale(0.9);
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #e7a1b0;
+    /* Um rosa mais suave e quente */
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.question {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.final-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    background-color: #c08497;
+    /* Cor principal, rosa queimado */
+    color: #fff;
+}
+
+#yes-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(192, 132, 151, 0.3);
+}
+
+#no-btn {
+    background-color: transparent;
+    border-color: #6a7c8e;
+    color: #9ab;
+}
+
+/* Efeito sutil para o botão 'Não' */
+#no-btn:hover {
+    opacity: 0.6;
+    transform: scale(0.95);
+}
+
+#success-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    /* Adicionado para garantir que o texto fique na frente do canvas */
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo do canvas de confete */
+#confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Fica atrás do texto (que tem z-index 2) */
+}
+
+.hidden {
+    display: none;
+}

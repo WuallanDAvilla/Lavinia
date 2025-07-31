@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um convite para você, Lavinia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card" id="proposal-card">
+            <h1 class="name">Lavinia,</h1>
+            <p class="question">Uma flor para outra flor - Você é gentil, alegre, divertida, tem uma personalidade incrivel desde quando eu te conheci até agora, espero que continuemos sempre, mas a pergunta que não quer calar...</p>
+            <p class="final-question">Aceitas ficarmos juntos?</p>
+            <div class="buttons" id="buttons">
+                <button id="yes-btn">Sim, eu aceito!</button>
+                <button id="no-btn">Não</button>
+            </div>
+        </div>
+
+        <div class="card hidden" id="success-card">
+            <!-- O canvas para o confete é adicionado aqui -->
+            <canvas id="confetti-canvas"></canvas>
+            <h2>EBAA! Agora estamos juntos! ❤️</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
